@@ -1,0 +1,71 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.center {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: brown;
+}
+
+.left-bar {
+  background-color: skyblue;
+  width: calc(100vw - 70vw);
+  height: 100%;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  font-size: 20px;
+}
+
+.li1 {
+  padding:20px;
+}
+
+.right-main {
+  background-color: beige;
+  width: calc(100vw - 30vw);
+  height: 100%;
+  display: block;
+}
+
+.company {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background-color: blanchedalmond;
+}
+
+.search_form {
+  height: calc(100% - 100px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  align-items: center;
+}
+
+.text {
+  height: 40px;
+  width: 300px;
+  font-size: 30px;
+}
+
+.btn-primary {
+  font-size: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: aqua;
+  width: 100%;
+  background-color: blue;
+}
