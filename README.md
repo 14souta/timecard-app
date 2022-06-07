@@ -1,24 +1,26 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| start_work_id      | integer  | null: false               |
+| end_work_id        | integer  | null: false               |
 
-Things you may want to cover:
 
-* Ruby version
+##　アソシエーション
+has_many :timecards
 
-* System dependencies
+## timecard テーブル
 
-* Configuration
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| start_work      | time       | null: false               |
+| end_work        | time       | null: false               |
+| user_id         | references | null: false, foreign_key: true    |
+| today           | date       | null: false               |
 
-* Database creation
+##　アソシエーション
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+belongs_to :user
