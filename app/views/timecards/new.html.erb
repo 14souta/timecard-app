@@ -1,1 +1,13 @@
-<h1>出勤確定</h1>
+
+
+<h1>出勤</h1>
+   <%= form_with url: "start_time", local: true do |form| %>
+     <%= form.datetime_field :content %>
+     <%= form.submit '出勤する' %>
+   <% end %>
+
+<h1>退勤</h1>
+   <%= form_with url: "stop_time", local: true do |form| %>
+     <%= form.datetime_field :content %>
+     <%= form.submit '退勤する' %>
+   <% end %>

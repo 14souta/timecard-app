@@ -5,9 +5,6 @@
 | nickname           | string | null: false               |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
-| start_work_id      | integer  | null: false               |
-| end_work_id        | integer  | null: false               |
-
 
 ##　アソシエーション
 has_many :timecards
@@ -16,11 +13,35 @@ has_many :timecards
 
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
-| start_work      | time       | null: false               |
-| end_work        | time       | null: false               |
-| user_id         | references | null: false, foreign_key: true    |
-| today           | date       | null: false               |
+| start_work      | integer | null: false |
+| end_work        | integer | null: false |
+
+
 
 ##　アソシエーション
 
 belongs_to :user
+has_one :start_time
+has_one :stop_time
+
+## start_time
+
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| start_work      | time       | null: false               |
+
+##　アソシエーション
+
+belongs_to :timecard
+
+## stop_time
+
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| stop_work      | time       | null: false               |
+
+
+##　アソシエーション
+
+belongs_to :timecard
+

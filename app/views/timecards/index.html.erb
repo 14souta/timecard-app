@@ -15,11 +15,12 @@
 
          <div class = right-main >
            <div class = app-name >TIMECARD</div>
-           <div class = clock >時間表示</div>
+           <div class = clock id="jikan"><%= @time %> </div>
            <div class = buttons >
-             <input type="button" value="出勤" onclick="location.href='timecards/new.html'" class="start-work">
+             <input type="button" value="出勤" onclick="location.href='timecards/new.html'" class="start-work" >
              <input type="button" value="退勤" onclick="location.href='timecards/new.html'" class="end-work">
            </div>
+          
          </div>
   </div>
       <% else %>
