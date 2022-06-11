@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StartTimeTest < ActiveSupport::TestCase
+class StartTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
