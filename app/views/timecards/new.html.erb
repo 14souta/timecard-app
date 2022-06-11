@@ -1,21 +1,7 @@
 
 <% if @timecard.start_time == nil%>
-<h1>出勤</h1>
-   <%= form_with url: timecards_path, local: true do |form| %>
-     <%= form.text_field :name %>
-     <%= form.date_field :day %>
-     <%= form.time_field :start_time %>
-     <%= form.submit '出勤する' %>
-   <% end %>
 
 <% else %>
 
-<h1>退勤</h1>
-   <%= form_with url: timecards_path, local: true do |form| %>
-     <%= @timecard.name %>
-     <%= @timecard.day %>
-     <%= "#{@timecard.start_time}〜" %>
-     <%= form.time_field :stop_time %>
-     <%= form.submit '退勤する' %>
-   <% end %>
+
 <% end %>
