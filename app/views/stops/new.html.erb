@@ -1,7 +1,0 @@
-<h1>退勤</h1>
-   <%= form_with url: new_stop_path, local: true do |form| %>
-     <%= form.text_field :name %>
-     <%= form.date_field :day %>
-     <%= form.time_field :stop_time %>
-     <%= form.submit '退勤する' %>
-   <% end %>

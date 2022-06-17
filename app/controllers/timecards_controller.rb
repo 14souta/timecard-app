@@ -9,20 +9,20 @@ class TimecardsController < ApplicationController
   end
   
   def create
-    @timecard = Timecard.new(time_params)
-    if @timecard.save
-       redirect_to root_path
-    elsif @timecard.stop_time == nil
-      render :new
+    @time_card = Timecard.new(timecard_params)
+    case params[:commit]
+      when "出勤" ; @time_card.start_time = Time.now
+      when "退勤" ; @time_card.end_time = Time.now
+    end
+    if @time_card.save
+      redirect_to root_path
     else
-       redirect_to root_path
-   end
+      render :index
+    end  
   end
 
-
   private
-
-  def time_params
-    params.permit(:name, :start_time, :stop_time, :day)
+  def timecard_params
+    params.permit(:start_time, :end_time).merge(user_id: current_user.id)
   end
 end

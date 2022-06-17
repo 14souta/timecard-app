@@ -18,7 +18,7 @@
            <div class = clock id="jikan"><%= @time %> </div>
            <% if @timecard.blank?  %>
            <div class = buttons >
-             <input type="button" value="出勤" onclick="location.href='starts/new.html'" class="start-work" >
+             <%= button_to '出勤', new_timecard_start_path, method: :get, class: start-work %> 
           <% else %>
              <input type="button" value="退勤" onclick="location.href='stops/new.html'" class="end-work">
            </div>
