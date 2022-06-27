@@ -58,21 +58,20 @@ align-items: center;
   height: 100%;
   width: calc(100% - 30%);
   display: block;
+  align-items: ;
 }
 
 .buttons {
   background-color: bisque;
-  height: calc(100% - 60% - 100px);
+  height:;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .clock {
-  height: calc(100% - 40%);
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .start-work {

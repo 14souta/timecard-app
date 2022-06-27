@@ -13,8 +13,8 @@ has_many :employees
 
 | Column        | Type       | Options                  |
 | ------------- | ---------- | ------------------------ |
-| start_time    | time       | null: false, foreign_key |
-| stop_time     | time      | null: false, foreign_key |
+| start         | references | null: false, foreign_key |
+| stop    　　　 | references | null: false, foreign_key |
 | employee_id   | references | null: false, foreign_key |
 
 
@@ -34,6 +34,32 @@ has_many :employees
 ##　アソシエーション
 
 belongs_to :user
+belomgs_to :timecard
+
+
+## start
+
+| Column      | Type   | Options     |
+| ----------- | ------ | ----------- |
+| start_time  | time   | null: false |
+
+
+
+##　アソシエーション
+
+belomgs_to :timecard
+
+
+## stop
+
+| Column      | Type   | Options     |
+| ----------- | ------ | ----------- |
+| stop_time   | time   | null: false |
+
+
+
+##　アソシエーション
+
 belomgs_to :timecard
 
 

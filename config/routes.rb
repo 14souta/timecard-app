@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "timecards#index"
-  resources :users, only: [:edit, :update]
-  resources :timecards, only: [:new]
+  root to: "start_stops#index"
+  resources :start_stops do
+    resources :start, only: [:new, :create]
+    resources :stop, only: [:new, :create]
+  end
+ 
+ 
 
-  resources :starts,  only: [:new, :create]
-
-  resources :stops, only: [:new, :cretae]
 
 
 end
