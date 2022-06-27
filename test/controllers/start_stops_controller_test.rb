@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TimecardsControllerTest < ActionDispatch::IntegrationTest
+class StartStopsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

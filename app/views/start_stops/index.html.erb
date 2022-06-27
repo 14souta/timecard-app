@@ -1,0 +1,37 @@
+<div class = main >
+  <div class = top-page >
+    <div class = left-bar >
+      <% if user_signed_in? %>
+        <div class = lists >
+          <h1><%= current_user.nickname %></h1>
+          <ul>
+            <li class = li1><%= link_to "社員登録" %></li>
+            <li class = li2><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
+          </ul>
+        </div>
+    </div>
+
+        <div class = right-main >
+          <div class = app-name >TIMECARD</div>
+          <div>  時間</div>
+          <% @timecard.each do |timecard| %>
+            <div class = clock >
+                 出勤<%= "#{timecard.start_time}"%> 〜退勤<%= "#{timecard.stop_time}" %>
+            </div>
+          <% end %>
+           <div class = buttons >
+             <%= button_to '出退勤登録', '#', method: :get, class: "start-work" %> 
+           </div>
+          
+        </div>
+  </div>
+      <% else %>
+        <div class = devise >
+          <div class = no-sign-in >
+              <h1>TIMECARD</h1>
+            <%= link_to "社員登録", new_user_registration_path %>
+            <%= link_to "ログイン", new_user_session_path %>
+          </div>
+        </div>
+      <% end %>
+</div>
