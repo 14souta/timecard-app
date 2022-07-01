@@ -9,32 +9,21 @@
 ##　アソシエーション
 has_many :employees
 
-## timecard テーブル
+## start_stop テーブル
 
 | Column        | Type       | Options                  |
 | ------------- | ---------- | ------------------------ |
 | start         | references | null: false, foreign_key |
 | stop    　　　 | references | null: false, foreign_key |
-| employee_id   | references | null: false, foreign_key |
+| user          | references | null: false, foreign_key |
 
 
 ##　アソシエーション
 
-has_many :employees
+has_many :starts
+has_many :stops
 
 
-## employee
-
-| Column      | Type   | Options     |
-| ----------- | ------ | ----------- |
-| name        | string | null: false |
-
-
-
-##　アソシエーション
-
-belongs_to :user
-belomgs_to :timecard
 
 
 ## start
@@ -47,7 +36,7 @@ belomgs_to :timecard
 
 ##　アソシエーション
 
-belomgs_to :timecard
+belomgs_to :start_stop
 
 
 ## stop
@@ -60,6 +49,6 @@ belomgs_to :timecard
 
 ##　アソシエーション
 
-belomgs_to :timecard
+belomgs_to :start_stop
 
 

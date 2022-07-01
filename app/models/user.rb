@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
          validates :nickname, presence: true, length: { maximum: 6 }
 
-         has_many :starts
+         has_many :start_stops
          
 end
