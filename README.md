@@ -7,48 +7,24 @@
 | encrypted_password | string | null: false               |
 
 ##　アソシエーション
-has_many :employees
+has_many :timecards
 
-## start_stop テーブル
+## timecard テーブル
 
 | Column        | Type       | Options                  |
 | ------------- | ---------- | ------------------------ |
-| start         | references | null: false, foreign_key |
-| stop    　　　 | references | null: false, foreign_key |
-| user          | references | null: false, foreign_key |
+| start_time         | references | null: false, foreign_key |
+| stop_time    　　　 | references | null: false, foreign_key |
+| user               | references | null: false, foreign_key |
 
 
 ##　アソシエーション
 
-has_many :starts
-has_many :stops
+belongs_to :user
 
 
 
 
-## start
 
-| Column      | Type   | Options     |
-| ----------- | ------ | ----------- |
-| start_time  | time   | null: false |
-
-
-
-##　アソシエーション
-
-belomgs_to :start_stop
-
-
-## stop
-
-| Column      | Type   | Options     |
-| ----------- | ------ | ----------- |
-| stop_time   | time   | null: false |
-
-
-
-##　アソシエーション
-
-belomgs_to :start_stop
 
 
