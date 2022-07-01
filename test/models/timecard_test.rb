@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StartStopTest < ActiveSupport::TestCase
+class TimecardTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

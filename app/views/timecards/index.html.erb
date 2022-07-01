@@ -5,7 +5,7 @@
         <div class = lists >
           <h1><%= current_user.nickname %></h1>
           <ul>
-            <li class = li1><%= link_to "社員登録" %></li>
+            <li class = li1><%= link_to "時間管理", start_stop_path(@start_stop) %></li>
             <li class = li2><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
           </ul>
         </div>
@@ -13,16 +13,8 @@
 
         <div class = right-main >
           <div class = app-name >TIMECARD</div>
-          <div>  時間</div>
-          <% @timecard.each do |timecard| %>
-            <div class = clock >
-                 出勤<%= "#{timecard.start_time}"%> 〜退勤<%= "#{timecard.stop_time}" %>
-            </div>
-          <% end %>
-           <div class = buttons >
-             <%= button_to '出退勤登録', '#', method: :get, class: "start-work" %> 
-           </div>
-          
+          <div class = time >  時間</div>
+          <%= render partial: 'start' %>
         </div>
   </div>
       <% else %>

@@ -58,15 +58,20 @@ align-items: center;
   height: 100%;
   width: calc(100% - 30%);
   display: block;
-  align-items: ;
+  position: relative;
 }
 
 .buttons {
   background-color: bisque;
-  height:;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  position:absolute;
+  left: 350px;
+  bottom: 70px;
+
+}
+
+.time {
+  background-color: azure;
+  height: 500px;
 }
 
 .clock {

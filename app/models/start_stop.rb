@@ -1,2 +1,0 @@
-class StartStop < ApplicationRecord
-end
