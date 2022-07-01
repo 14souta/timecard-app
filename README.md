@@ -1,24 +1,54 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-Things you may want to cover:
+##　アソシエーション
+has_many :employees
 
-* Ruby version
+## start_stop テーブル
 
-* System dependencies
+| Column        | Type       | Options                  |
+| ------------- | ---------- | ------------------------ |
+| start         | references | null: false, foreign_key |
+| stop    　　　 | references | null: false, foreign_key |
+| user          | references | null: false, foreign_key |
 
-* Configuration
 
-* Database creation
+##　アソシエーション
 
-* Database initialization
+has_many :starts
+has_many :stops
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## start
+
+| Column      | Type   | Options     |
+| ----------- | ------ | ----------- |
+| start_time  | time   | null: false |
+
+
+
+##　アソシエーション
+
+belomgs_to :start_stop
+
+
+## stop
+
+| Column      | Type   | Options     |
+| ----------- | ------ | ----------- |
+| stop_time   | time   | null: false |
+
+
+
+##　アソシエーション
+
+belomgs_to :start_stop
+
+

@@ -1,21 +1,23 @@
+/* main */
+
 .main {
+  background-color: black;
   height: 100vh;
   width: 100vw;
-  background-color: black;
 }
 
-.center {
+.top-page {
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: brown;
 }
 
 .left-bar {
   background-color: skyblue;
-  width: calc(100vw - 70vw);
   height: 100%;
+  width: calc(100% - 70%);
   text-align: center;
+  display: block;
 }
 
 ul {
@@ -24,48 +26,98 @@ ul {
 }
 
 .li1 {
-  padding:20px;
+padding-top: 30px;
+}
+
+.li2 {
+  padding-top: 30px;
+}
+
+
+.devise {
+background-color: skyblue;
+height: 100%;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.no-sign-in {
+  background-color: lightgreen;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: large;
 }
 
 .right-main {
   background-color: beige;
-  width: calc(100vw - 30vw);
   height: 100%;
+  width: calc(100% - 30%);
   display: block;
+  position: relative;
 }
 
-.company {
+.buttons {
+  background-color: bisque;
+  position:absolute;
+  left: 350px;
+  bottom: 70px;
+
+}
+
+.time {
+  background-color: azure;
+  height: 500px;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+}
+
+.start-work {
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #68779a;
+  background: #cbe8fa;
+  cursor: pointer;
+  font-size: large;
+}
+
+.end-work {
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #68779a;
+  background: #cbe8fa;
+  cursor: pointer;
+  font-size: large;
+}
+
+.logout {
+padding: 30px;
+}
+
+.app-name {
+  background-color: blanchedalmond;
   height: 100px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
-  background-color: blanchedalmond;
+
 }
 
 .search_form {
+  background-color: whitesmoke;
   height: calc(100% - 100px);
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: whitesmoke;
   align-items: center;
-}
-
-.text {
-  height: 40px;
-  width: 300px;
-  font-size: 30px;
-}
-
-.btn-primary {
-  font-size: 20px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  color: aqua;
-  width: 100%;
-  background-color: blue;
 }
